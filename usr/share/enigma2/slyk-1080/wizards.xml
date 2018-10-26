@@ -1,0 +1,123 @@
+<skin>
+	<screen name="RemoteControlTemplate">
+		<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="1528,404" zPosition="10" size="154,500" alphatest="blend" />
+		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-150,-225" zPosition="11" size="56,105" alphatest="blend" />
+		<widget name="arrowup" pixmap="skin_default/arrowdown.png" position="-150,-225" zPosition="11" size="56,105" alphatest="blend" />
+		<widget name="arrowup2" pixmap="skin_default/arrowdown.png" position="-150,-225" zPosition="11" size="56,105" alphatest="blend" />
+		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-150,-225" zPosition="11" size="56,105" alphatest="blend" />
+
+	</screen>
+	
+	<!-- -->
+	<screen name="WizardTemplate">
+                <panel name="main-template" />
+		<panel name="v5-services" />
+		<panel name="t3-panel-bg" />
+		
+		<eLabel position="849,506" size="915,48" backgroundColor="skylightrow" zPosition="-1"/>                                         -
+		<eLabel position="849,560" size="915,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		
+		<eLabel position="849,614" size="915,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="849,668" size="915,48" backgroundColor="skydarkrow" zPosition="-1"/>
+	
+		<eLabel position="849,722" size="915,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="849,776" size="915,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		
+		<eLabel position="849,830" size="915,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="849,884" size="915,48" backgroundColor="skydarkrow" zPosition="-1"/>
+
+	        <widget name="text" position="165,515" size="627,408" font="Regular;30" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" zPosition="2" />
+        	<widget name="config" textOffset="15,0" position="849,503" size="915,432" font="Regular;39" secondfont="Regular;39" backgroundColor="skylightrow" selectionPixmap="2018-selectbars/menu-bar-54.png" backgroundPixmap="2018-selectbars/blank.png" itemHeight="54" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="1" />
+
+                <widget source="list" render="Listbox" position="849,503" size="915,432" font="Regular;39" secondfont="Regular;39" backgroundColor="skylightrow" selectionPixmap="2018-selectbars/menu-bar-54.png" backgroundPixmap="2018-selectbars/blank.png" itemHeight="54" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="1" >
+			<convert type="TemplatedMultiContent">{"template": [
+                                MultiContentEntryText(pos = (15, 0), size = (885, 54), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0) ],
+				"fonts": [gFont("Regular", 39)],
+				"itemHeight": 54
+				}</convert>
+		</widget>
+                <panel name="New-Buttons-T1" />
+
+	</screen>
+	
+	<!-- -->
+	<screen name="HelpMenu" position="fill" flags="wfNoBorder" backgroundColor="backgroundmid">
+		<panel name="main-template-2" />
+                
+		<panel name="v5-services" />
+		<widget source="Title" render="Label" position="90,123" size="1200,52" valign="center" halign="center" font="Regular;39" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
+
+		<widget name="list" textOffset="15,3" position="150,228" size="1080,648"  backgroundColor="bgdarkblue" foregroundColor="white" backgroundColorSelected="skygold" foregroundColorSelected="skydarkblue" selectionPixmap="2018-selectbars/bar-54.png" itemHeight="54" scrollbarMode="showNever" transparent="1" />
+				
+		<widget name="long_key" position="1290,912" size="630,60" font="Regular;39" halign="center" foregroundColor="white" transparent="1" />
+	
+        	<panel name="RemoteControlTemplate" />
+	</screen>
+	
+	<screen name="StartWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="backgroundmid">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<screen name="ImageWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="backgroundmid">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<screen name="DefaultWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="backgroundmid">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<screen name="NetworkWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="backgroundmid">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<screen name="DefaultSatLists" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="backgroundmid">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<screen name="DreamPackageWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="backgroundmid">
+		<panel name="WizardTemplate" />
+	</screen>
+
+	
+	<screen name="CleanupWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="backgroundmid">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<screen name="VideoWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="backgroundmid">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<!-- -->
+	<screen name="LanguageWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="backgroundmid">
+	    <panel name="main-template" />
+		<panel name="v5-services" />
+		<panel name="t3-panel-bg" />
+
+		<eLabel position="849,506" size="915,48" backgroundColor="skylightrow" zPosition="-1"/>                                         -
+		<eLabel position="849,560" size="915,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		
+		<eLabel position="849,614" size="915,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="849,668" size="915,48" backgroundColor="skydarkrow" zPosition="-1"/>
+	
+		<eLabel position="849,722" size="915,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="849,776" size="915,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		
+		<eLabel position="849,830" size="915,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="849,884" size="915,48" backgroundColor="skydarkrow" zPosition="-1"/>
+
+	        <widget name="text" position="165,515" size="627,408" font="Regular;30" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" zPosition="2" />
+        	<widget name="config" textOffset="15,0" position="849,503" size="915,432" font="Regular;39" secondfont="Regular;39" backgroundColor="skylightrow" selectionPixmap="2018-selectbars/menu-bar-54.png" backgroundPixmap="2018-selectbars/blank.png" itemHeight="54" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="1" />
+
+                <widget source="languages" render="Listbox" position="849,503" size="915,432" font="Regular;39" secondfont="Regular;39" backgroundColor="skylightrow" selectionPixmap="2018-selectbars/menu-bar-54.png" backgroundPixmap="2018-selectbars/blank.png" itemHeight="54" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="1" >
+			<convert type="TemplatedMultiContent">{"template": [
+                                MultiContentEntryPixmapAlphaBlend(pos = (15,6), size = (57,42), png = 2), # index 2 is the pixmap,
+                                MultiContentEntryText(pos = (87, 0), size = (798, 54), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1) , # index 1 is the language name,
+ 	
+				],
+				"fonts": [gFont("Regular", 39)],
+				"itemHeight": 54
+				}</convert>
+		</widget>
+                <panel name="New-Buttons-T1" />
+	</screen>
+</skin>

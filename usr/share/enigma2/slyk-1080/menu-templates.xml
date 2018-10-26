@@ -1,0 +1,259 @@
+<skin>
+
+
+	<screen name="panel-bars">
+		<eLabel position="150,506" size="1620,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="150,560" size="1620,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="150,614" size="1620,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="150,668" size="1620,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="150,722" size="1620,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="150,776" size="1620,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="150,830" size="1620,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="150,884" size="1620,48" backgroundColor="skydarkrow" zPosition="-1"/>
+	</screen>
+	
+	
+	<screen name="panel-bars-left">
+	
+		<eLabel position="150,506" size="796,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="150,560" size="796,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="150,614" size="796,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="150,668" size="796,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="150,722" size="796,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="150,776" size="796,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="150,830" size="796,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="150,884" size="796,48" backgroundColor="skydarkrow" zPosition="-1"/>
+	</screen>
+	
+	<screen name="panel-bars-right">
+	
+		
+		<eLabel position="974,506" size="796,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="974,560" size="796,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="974,614" size="796,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="974,668" size="796,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="974,722" size="796,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="974,776" size="796,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="974,830" size="796,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="974,884" size="796,48" backgroundColor="skydarkrow" zPosition="-1"/>
+	</screen>
+	
+	<screen name="panel-bars-left-75">
+		<eLabel position="150,506" size="796,69" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="150,581" size="796,69" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="150,656" size="796,69" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="150,731" size="796,69" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="150,806" size="796,69" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="150,881" size="796,69" backgroundColor="skydarkrow" zPosition="-1"/>
+	</screen>
+	
+	<screen name="setup-panel-bars">
+		<eLabel position="280,506" size="1360,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="280,560" size="1360,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="280,614" size="1360,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="280,668" size="1360,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="280,722" size="1360,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="280,776" size="1360,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="280,830" size="1360,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="280,884" size="1360,48" backgroundColor="skydarkrow" zPosition="-1"/>
+	</screen>
+	
+	<screen name="setup-panel-bars-right">
+		<eLabel position="518,506" size="1246,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="518,560" size="1246,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="518,614" size="1246,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="518,668" size="1246,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="518,722" size="1246,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="518,776" size="1246,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="518,830" size="1246,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="518,884" size="1246,48" backgroundColor="skydarkrow" zPosition="-1"/>
+	</screen>
+	
+	<screen name="setup-panel-bars-small-right">
+		<eLabel position="849,506" size="915,48" backgroundColor="skylightrow" zPosition="-1"/>                                         -
+		<eLabel position="849,560" size="915,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="849,614" size="915,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="849,668" size="915,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="849,722" size="915,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="849,776" size="915,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="849,830" size="915,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="849,884" size="915,48" backgroundColor="skydarkrow" zPosition="-1"/>
+	</screen>
+	
+
+
+	<screen name="divider-left">
+	        <eLabel position="640,503" size="12,432" backgroundColor="bgdarkblue" zPosition="2"/>
+	</screen>
+	
+	<screen name="divider-middle">
+	        <eLabel position="954,503" size="12,432" backgroundColor="bgdarkblue" zPosition="2"/>
+	</screen>
+	
+	<screen name="divider-right">
+	        <eLabel position="1268,503" size="12,432" backgroundColor="bgdarkblue" zPosition="2"/>
+	</screen>
+	
+	
+	<screen name="Menu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="backgroundmid" title="Main Menu">
+	        <panel name="main-template" />
+	        
+		<panel name="v5-services" />
+		<panel name="t3-panel-bg" />
+		<panel name="panel-bars-left" />
+	
+		
+		<widget source="menu" render="Listbox" position="150,503" size="796,432" selectionPixmap="2018-selectbars/menu-bar-54.png" backgroundPixmap="2018-selectbars/blank.png" itemHeight="54" font="Regular;39" transparent="1" enableWrapAround="1" scrollbarMode="showNever">
+			<convert type="TemplatedMultiContent">{"template": [	
+                                MultiContentEntryText(pos = (15,0), size = (766,54), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0	) ],
+				"fonts": [gFont("Regular",39)],
+				"itemHeight": 54
+				}</convert>
+		</widget>		
+		<eLabel text="Press SELECT" position="152,993" size="1350,48" font="Regular;39" foregroundColor="skyblue" backgroundColor="bgdarkblue" valign="top" halign="left" transparent="1"  />
+	</screen>
+	
+	
+	<screen name="Setup-Default">
+                <panel name="main-template" />
+		<panel name="settings" />
+		<panel name="t3-panel-bg" />
+		<panel name="setup-panel-bars" />
+		
+		<widget name="config" textOffset="15,0" position="center,503" size="1360,432" font="Regular;39" secondfont="Regular;39" backgroundColor="skylightrow" selectionPixmap="2018-selectbars/menu-bar-54.png" backgroundPixmap="2018-selectbars/blank.png" itemHeight="54" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="1" />
+
+		<eLabel text="Use" position="152,993" size="75,48" font="Regular;39" foregroundColor="skyblue" backgroundColor="bgdarkblue" valign="top" halign="left" transparent="1" zPosition="1" />
+		<ePixmap pixmap="myicons/prev-next.png" position="227,1004" size="60,30" alphatest="blend" transparent="1" />
+		<eLabel text="to change settings and press GREEN to save changes" position="296,993" size="900,48" font="Regular;39" foregroundColor="skyblue" backgroundColor="bgdarkblue" valign="center" halign="left" transparent="1" zPosition="1" />
+
+		<panel name="New-Buttons-T1" />
+        </screen>
+        
+        
+       	<screen name="Setup-Default2">
+       	 <panel name="main-template" />
+		<panel name="settings" />
+		<panel name="t3-panel-bg" />
+		<panel name="setup-panel-bars" />
+		
+		<widget name="config" textOffset="15,0" position="center,503" size="1360,432" font="Regular;39" secondfont="Regular;39" backgroundColor="skylightrow" selectionPixmap="2018-selectbars/menu-bar-54.png" backgroundPixmap="2018-selectbars/blank.png" itemHeight="54" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="1" />
+                <panel name="New-Buttons-T1" />
+                	
+         </screen>
+        
+
+
+	<screen name="Setup-Small-Left">
+		<panel name="Setup-Default" />
+		<panel name="divider-left" />
+        </screen>
+        
+        
+	<screen name="Setup-Small-Right">
+		<panel name="Setup-Default" />
+		<panel name="divider-right" />
+	
+         </screen>
+          
+          
+	<screen name="Setup-Center">
+		<panel name="Setup-Default" />
+		<panel name="divider-middle" />
+
+        </screen>
+        
+        
+        <screen name="Setup-Plain">
+		<panel name="Setup-Default" />
+        </screen>
+	
+	
+	<screen name="Setup" position="0,0" size="1920,1080" backgroundColor="backgroundmid" flags="wfNoBorder">
+	        <panel name="Setup-Default" />
+                <panel name="description" />
+                <panel name="HelpWindow" />
+	        <panel name="footnote" />
+		<panel name="VKeyIcon" />	
+	</screen>
+	
+        <screen name="VideoSetup" position="0,0" size="1920,1080" backgroundColor="backgroundmid" flags="wfNoBorder">
+		<panel name="Setup-Small-Right" />
+                <panel name="description" />
+	</screen>
+	
+        <screen name="AudioSetup" position="0,0" size="1920,1080" backgroundColor="backgroundmid" flags="wfNoBorder">
+		<panel name="Setup-Small-Right" />
+                <panel name="description" />
+	</screen>
+	
+	
+	  <screen name="setup_subtitlesetup" position="0,0" size="1920,1080" backgroundColor="backgroundmid" flags="wfNoBorder">
+		<panel name="Setup-Small-Right" />
+                <panel name="description" />
+	</screen>
+	
+		
+	  <screen name="setup_autolanguagesetup" position="0,0" size="1920,1080" backgroundColor="backgroundmid" flags="wfNoBorder">
+		<panel name="Setup-Small-Right" />
+                <panel name="description" />
+	</screen>
+	
+        <screen name="setup_remotesetup" position="0,0" size="1920,1080" backgroundColor="backgroundmid" flags="wfNoBorder">
+		<panel name="Setup-Center" />
+                <panel name="description" />
+	</screen>
+	
+
+	<screen name="setup_specialfeatures" position="0,0" size="1920,1080" backgroundColor="backgroundmid" flags="wfNoBorder">
+		<panel name="Setup-Small-Right" />
+                <panel name="description" />
+                <panel name="HelpWindow" />
+	        <panel name="footnote" />
+		<panel name="VKeyIcon" />	
+	</screen>
+	
+	
+	<screen name="setup_keyboard" position="0,0" size="1920,1080" backgroundColor="backgroundmid" flags="wfNoBorder">
+		<panel name="Setup-Center" /> 	
+	</screen>
+	
+	
+	<screen name="setup_time" position="0,0" size="1920,1080" backgroundColor="backgroundmid" flags="wfNoBorder">
+		<panel name="Setup-Plain" />
+                <panel name="description" />
+	        <panel name="HelpWindow" />
+		<panel name="VKeyIcon" />
+        </screen>
+
+
+	<screen name="setup_userinterface" position="0,0" size="1920,1080" backgroundColor="backgroundmid" flags="wfNoBorder">
+		<panel name="Setup-Plain" />
+                <panel name="description" />
+	</screen>
+	
+
+	<screen name="setup_display" position="0,0" size="1920,1080" backgroundColor="backgroundmid" flags="wfNoBorder">
+		<panel name="Setup-Plain" />
+                <panel name="description" />
+	</screen>
+	
+	
+	<screen name="setup_channelselection" title="Setup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="backgroundmid">
+		<panel name="Setup-Plain" />
+                <panel name="description" />
+	        <panel name="footnote" />
+       	</screen>
+	
+	
+	<screen name="VFD_INISetup" position="0,0" size="1920,1080" backgroundColor="backgroundmid" flags="wfNoBorder" zPosition="4">
+		<panel name="Setup-Center" />
+                <widget name="information" position="90,179" size="1200,176" font="Regular;39" foregroundColor="white" backgroundColor="backgroundtop" valign="top" transparent="1" zPosition="1" />
+	</screen>
+	
+	
+	<screen name="OpenWebifConfig" title="OpenWebif Configuration" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="backgroundmid">
+		<panel name="Setup-Default" />
+                <panel name="description" />
+	</screen>
+
+</skin>

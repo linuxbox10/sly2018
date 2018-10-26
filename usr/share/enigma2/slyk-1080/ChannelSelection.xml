@@ -1,0 +1,341 @@
+
+<skin>
+	<screen name="ListTemplate">
+		<widget name="list"
+                position="105,190"
+                size="1170,750"
+                foregroundColor="white"
+                foregroundColorSelected="skydarkblue"
+                foregroundColorEvent="guidecolor"
+                foregroundColorEventSelected="skydarkblue"
+                foregroundColorMarked="white"
+                foregroundColorMarkedSelected="red"
+                foregroundColorServiceNotAvail="verydarkgrey"
+                backgroundColor="bgdarkblue"
+                backgroundColorSelected="skygold"
+                backgroundColorMarked="skydarkblue"
+                backgroundColorMarkedSelected="skygold"
+                selectionPixmap="2018-selectbars/bar-54.png"
+                colorServiceRecorded="red"
+                serviceItemHeight="54"
+                serviceNameFont="Regular;33"
+                serviceInfoFont="Regular;33"
+                serviceNumberFont="Regular;33"
+                picServiceEventProgressbar="2018-/progress-50-6.png"
+                progressbarHeight="9"
+                progressbarBorderWidth="2"
+                progressBarWidth="75"
+                colorEventProgressbar="skygold"
+                colorEventProgressbarSelected="skydarkblue"
+                colorEventProgressbarBorder="white"
+                colorEventProgressbarBorderSelected="skydarkblue"
+                fieldMargins="15"
+                nonplayableMargins="15"
+                itemsDistances="15"
+                transparent="1"
+                zPosition="4"
+                scrollbarMode="showOnDemand" />
+	</screen>
+	
+	<!-- templates -->
+	<screen name="NowStartTime">
+		<widget source="ServiceEvent" render="Label" position="1372,400" size="80,52" font="Regular;27" foregroundColor="white" backgroundColor="bgdarkblue" valign="center" halign="left" noWrap="1" transparent="1" zPosition="4">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H.%M</convert>
+		</widget>
+	</screen>
+	
+	
+	<screen name="NowName">
+		<widget source="ServiceEvent" render="Label" position="1452,400" size="363,52" font="Regular;27" foregroundColor="white" backgroundColor="bgdarkblue" valign="center" halign="left" noWrap="1" transparent="1" zPosition="4">
+			<convert type="EventName">NowName</convert>
+		</widget>
+	</screen>
+
+	
+	<screen name="NowDescription">
+		<widget source="ServiceEvent" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=100,repeat=0,always=0,oneshot=0,startdelay=7000,wrap"
+                position="1372,459" size="443,186" font="Regular;27" foregroundColor="white" backgroundColor="skydarkblue" valign="top" transparent="1" zPosition="4">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+	</screen>
+	
+	<screen name="NextStartTime">
+		<widget source="ServiceEvent" render="Label" position="1372,650" size="80,52" font="Regular;27" foregroundColor="white" backgroundColor="bgdarkblue" valign="center" halign="left" noWrap="1" transparent="1" zPosition="4">
+			<convert type="EventTime">NextStartTime</convert>
+			<convert type="ClockToText">Format:%H.%M</convert>
+		</widget>
+	</screen>
+	
+	<screen name="NextName">
+		<widget source="ServiceEvent" render="Label" position="1452,650" size="363,52" font="Regular;27" foregroundColor="white" backgroundColor="bgdarkblue" valign="center" halign="left" noWrap="1" transparent="1" zPosition="4">
+			<convert type="EventName">NextName</convert>
+		</widget>
+	</screen>
+	
+	<screen name="NextDescription">
+		<widget source="ServiceEvent" render="Label" position="1372,709" size="443,186" font="Regular;27" foregroundColor="white" backgroundColor="skydarkblue" valign="top" transparent="1" zPosition="4">
+			<convert type="EventName">NextDescription</convert>
+		</widget>
+	</screen>
+	
+	<screen name="LaterStartTime">
+		<widget source="ServiceEvent" render="Label" position="1372,900" size="80,52" font="Regular;27" foregroundColor="white" backgroundColor="bgdarkblue" valign="center" halign="left" noWrap="1" transparent="1" zPosition="4">
+			<convert type="EventTime">ThirdStartTime</convert>
+			<convert type="ClockToText">Format:%H.%M</convert>
+		</widget>
+	</screen>
+	
+	<screen name="LaterName">
+		<widget source="ServiceEvent" render="Label" position="1452,900" size="363,52" font="Regular;27" foregroundColor="white" backgroundColor="bgdarkblue" valign="center" halign="left" noWrap="1" transparent="1" zPosition="4">
+			<convert type="EventName">ThirdName</convert>
+		</widget>
+	</screen>
+
+        <!-- -->
+	<screen name="ChannelSelection" flags="wfNoBorder" position="0,0" size="1920,1080" backgroundColor="backgroundmid">
+		<panel name="main-template-2" />
+		<panel name="v5-tv-guide" />
+		<widget source="Title" render="Label" position="90,123" size="1200,52" valign="center" halign="center" font="Regular;39" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
+		<panel name="ListTemplate" />
+		
+                <eLabel position="1357,400" size="473,52" backgroundColor="bgdarkblue" zPosition="-1"/>
+
+		<panel name="NowName" />
+		<panel name="NowStartTime" />
+		<panel name="NowDescription" />
+		
+                <eLabel position="1357,650" size="473,52" backgroundColor="bgdarkblue" zPosition="-1"/>
+		
+		<panel name="NextName" />
+		<panel name="NextStartTime" />
+		<panel name="NextDescription" />
+		
+		
+                <eLabel position="1357,900" size="473,52" backgroundColor="bgdarkblue" zPosition="-1"/>
+
+		<panel name="LaterName" />
+		<panel name="LaterStartTime" />
+
+		<panel name="New-Buttons-T2" />
+		
+		<panel name="t2-MenuButton" />
+		<panel name="t2-InfoButton-pos2" />
+	</screen>
+
+        <!-- -->
+	<!-- epgselection > menu > import from EPG -->
+	<screen name="SimpleChannelSelection" position="0,0" size="1920,1080" backgroundColor="backgroundmid" transparent="0" flags="wfNoBorder">
+		<panel name="ChannelSelection" />
+	</screen>
+	
+	<!-- -->
+	<!--  alternative channel list service mode - available via context menu -->
+	<!-- not used in this skin - clone channelselect instead -->
+	<screen name="SlimChannelSelection" position="0,0" size="1920,1080" backgroundColor="backgroundmid" transparent="0" flags="wfNoBorder">
+		<panel name="ChannelSelection" />
+	</screen>
+	
+	<!-- -->
+	<screen name="ChannelSelectionRadio" position="0,0" size="1920,1080" backgroundColor="transparent" transparent="0" flags="wfNoBorder">
+		<ePixmap pixmap="2018-backgrounds/radio-list-bg.png" position="center,69" size="1050,435" alphatest="blend" zPosition="-1" />
+		<widget name="list"
+                position="center,81"
+                size="960,420"
+                foregroundColor="white"
+                backgroundColor="#0c081a3d"
+                foregroundColorSelected="#081a3d"
+                backgroundColorSelected="white"
+                foregroundColorEvent="skylightblue"
+                foregroundColorEventSelected="#081a3d"
+                foregroundColorMarked="red"
+                foregroundColorMarkedSelected="red"
+                backgroundColorMarked="#081a3d"
+                backgroundColorMarkedSelected="#081a3d"
+                foregroundColorServiceNotAvail="verydarkgrey"
+                colorServiceRecorded="red"
+                serviceItemHeight="54"
+                serviceNameFont="Regular;24"
+                serviceInfoFont="Regular;24"
+                serviceNumberFont="Regular;24"
+                picServiceEventProgressbar="2018-progress/progress-50-6.png"
+                progressbarHeight="9"
+                progressbarBorderWidth="2"
+                progressBarWidth="75"
+                colorEventProgressbar="skyblue"
+                colorEventProgressbarSelected="black"
+                colorEventProgressbarBorder="white"
+                colorEventProgressbarBorderSelected="black"
+                foregroundColorService="white"
+                backgroundColorService="#081a3d"
+                foregroundColorServiceSelected="white"
+                fieldMargins="15"
+                itemsDistances="15"
+                nonplayableMargins="15"
+                transparent="1"
+                zPosition="4"
+                scrollbarMode="showNever" />
+                
+		<ePixmap pixmap="2018-backgrounds/radioinfobar.png" position="162,551" size="1596,461" alphatest="blend" zPosition="-1" />
+		<widget source="ServiceEvent" render="Label" position="185,566" size="180,54" font="Bold;42" foregroundColor="white" backgroundColor="skydarkblue" valign="top" noWrap="1" transparent="1" zPosition="3" >
+			<convert type="EventTime">StartTime</convert>
+			<convert type="Slyk18ClockToText">Slyk18Time</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="350,566" size="1191,54" font="Bold;42" foregroundColor="white" backgroundColor="skydarkblue" valign="top" noWrap="1" transparent="1" zPosition="3" >
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="ServiceEvent" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=100,repeat=0,always=0,oneshot=0,startdelay=7000,wrap"
+                position="185,620" size="1535,158" font="Regular;39" foregroundColor="white" backgroundColor="skydarkblue" valign="top" transparent="1" zPosition="3">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<widget source="Service" render="Label" position="185,785" size="1191,54" font="Bold;42" foregroundColor="white" backgroundColor="skydarkblue" valign="center" halign="left" noWrap="1" transparent="1" >
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<ePixmap pixmap="myicons/radio.png" position="929,791" size="30,44" alphatest="blend" zPosition="-1" />
+		<widget source="global.CurrentTime" render="Label" position="1376,785" size="360,54" font="Regular;36" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" halign="right" transparent="1" zPosition="2">
+			<convert type="Slyk18ClockToText">Slyk18DateFormat2</convert>
+		</widget>
+		<eLabel text="Now" render="Label" position="213,843" size="420,54" font="Regular;39" foregroundColor="white" backgroundColor="#003f7abc" valign="center" halign="left" transparent="1" />
+		<widget source="ServiceEvent" render="Label" position="213,897" size="716,54" font="Regular;39" foregroundColor="white" backgroundColor="skydarkblue" valign="center" noWrap="1" transparent="1" >
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="963,843" size="180,54" font="Regular;39" foregroundColor="white" backgroundColor="#003f7abc" valign="center" noWrap="1" transparent="1" >
+			<convert type="EventTime">NextStartTime</convert>
+			<convert type="Slyk18ClockToText">Slyk18Time</convert>
+		</widget>
+		<!-- next event -->
+		<widget source="ServiceEvent" render="Label" position="963,897" size="744,54" font="Regular;39" foregroundColor="white" backgroundColor="skydarkblue" valign="center" noWrap="1" transparent="1" >
+			<convert type="EventName">NextNameOnly</convert>
+		</widget>
+		<!-- record icon-->
+		<widget render="Pixmap" source="session.RecordState" pixmap="icons/icon_rec_sm.png" position="1691,860" size="30,30" alphatest="blend" zPosition="5">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<ePixmap pixmap="myicons/up-down-white.png" position="200,969" size="54,30" backgroundColor="transparent" alphatest="blend" transparent="1" zPosition="4" />
+		<eLabel text="Channels" position="263,954" size="171,57" font="Regular;39" foregroundColor="white" backgroundColor="#003f7abc" valign="center" halign="left" transparent="1" />
+		<ePixmap pixmap="buttons/key_blue.png" position="1275,965" size="36,36" backgroundColor="transparent" alphatest="blend" transparent="1" zPosition="4" />
+		<eLabel text="Last/Fav" position="1320,954" size="171,57" font="Regular;39" foregroundColor="white" backgroundColor="#003f7abc" valign="center" halign="left" transparent="1" />
+	</screen>
+	
+	<!-- not used in this skin so hidden -->
+	<screen name="RadioInfoBar" position="0,0" size="0,0" backgroundColor="backgroundmid" flags="wfNoBorder" />
+	
+	<!-- channel select menu -->
+	
+	<!-- -->
+        <screen name="ChannelContextMenu" position="0,0" size="1920,1080" backgroundColor="backgroundmid" flags="wfNoBorder">
+	        <panel name="main-template" />
+	
+		<panel name="v5-services" />
+		<panel name="t3-panel-bg" />
+		<panel name="panel-bars-left" />
+		<widget name="menu" position="150,503" size="796,432" selectionPixmap="2018-selectbars/menu-bar-54.png" backgroundPixmap="2018-selectbars/blank.png" itemHeight="54" font="Regular;39" transparent="1" enableWrapAround="1" scrollbarMode="showNever" />
+		<eLabel text="Press SELECT" position="152,993" size="1350,48" font="Regular;39" foregroundColor="skyblue" backgroundColor="bgdarkblue" valign="top" halign="left" transparent="1"  />
+	
+	</screen>
+	
+	<!-- -->
+	<screen name="HistoryZapSelector" position="0,0" size="1920,1080"  backgroundColor="black" flags="wfNoBorder" >
+	
+	        <ePixmap pixmap="2018-backgrounds/main-bg.png" position="1320,0" size="600,1080" zPosition="1" />
+       		<ePixmap pixmap="myicons/logo.png" position="1554,40" size="132,78" alphatest="blend" backgroundColor="transparent"  zPosition="2" />
+
+		<widget source="Title" render="Label" position="1350,134" size="540,44" font="Regular;39" foregroundColor="white" backgroundColor="backgroundtop" valign="center" halign="center" transparent="1" zPosition="2" />
+		
+		
+		<widget source="menu" render="Listbox" position="1350,200" size="540,840" foregroundColor="white" backgroundColor="skydarkblue" foregroundColorSelected="skydarkblue" backgroundColorSelected="skygold" selectionPixmap="2018-selectbars/bar-105.png" backgroundPixmap="2018-selectbars/bar-105-divider.png" scrollbarMode="showNever" transparent="1" zPosition="2">
+			<convert type="TemplatedMultiContent">{"template": [
+						MultiContentEntryText(pos = (15, 9), size = (30, 90), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1, color = 0x005ea1e4), # Current Service
+						MultiContentEntryText(pos = (45, 6), size = (330, 33), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 2, color = 0x00ffffff, color_sel = 0x0016356e), # Servicename
+						MultiContentEntryText(pos = (45, 41), size = (330, 60), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 3, color = 0x00ffffff, color_sel = 0x00000000), # Eventname
+						
+						MultiContentEntryPixmapAlphaBlend(pos=(382, 8), size=(150, 90), png=6, flags = BT_SCALE) # picon
+					],
+				 "fonts": [gFont("Regular",33), gFont("Regular",30), gFont("Regular",27), gFont("Regular",24)],
+				 "itemHeight": 105
+				}</convert>
+		</widget>
+		
+		<widget source="session.VideoPicture" render="Pig" position="0,169" size="1320,742" backgroundColor="transparent" />
+		
+		<widget source="session.VideoPicture" render="Pig" position="0,139" size="1380,802" backgroundColor="transparent" transparent="1" />
+	        <eLabel  position="0,169" size="1320,742" backgroundColor="transparent" zPosition="4"/>
+
+		
+		<widget source="global.CurrentTime" render="Label" position="135,945" size="300,47" font="Regular;36" foregroundColor="white" backgroundColor="backgroundtop" valign="top" halign="right" transparent="1" zPosition="3">
+			<convert type="Slyk18ClockToText">Slyk18DateFormat2</convert>
+		</widget>
+	</screen>
+	
+	<!-- -->
+	<!-- record button on channel select -->
+	<screen name="RecordTimerQuestion" position="center,center" size="464,201" backgroundColor="skyblue"   flags="wfNoBorder" zPosition="5">
+		
+                <ePixmap pixmap="2018-backgrounds/recordquestion.png" position="0,0" size="464,201" alphatest="blend" zPosition="-1" />
+		<widget name="text" position="0,0" size="0,0" font="Regular;33" />
+		<widget name="list" position="16,46" size="432,108" font="Regular;27" foregroundColor="white" backgroundColor="skydarkblue" foregroundColorSelected="skydarkblue" backgroundColorSelected="skygold" selectionPixmap="2018-selectbars/bar-54.png" itemHeight="54" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+	
+	<!-- -->
+	<!-- remove recording on channel select - 2nd popup-->
+	<screen name="RemoveTimerQuestion" position="center,center" size="755,195" zPosition="5">
+		<widget name="text" position="0,0" size="0,0" font="Regular;39" />
+		<widget name="list" textOffset="15,0" font="Regular;39" position="15,15" size="330,108" backgroundColor="messageboxbg" selectionPixmap="2018-selectbars/bar-54.png" enableWrapAround="1" transparent="1" itemHeight="54" />
+	<applet type="onLayoutFinish">
+from enigma import getDesktop, eSize, ePoint
+import math
+desktop_w = getDesktop(0).size().width()
+desktop_h = getDesktop(0).size().height()
+count = len(self.list)
+
+width = int(0.40625 * desktop_w)
+itemheight = 36
+
+	
+if desktop_w == 1920:
+	scale = 1.5
+
+else:
+    scale = 1
+
+if not self["text"].text:
+	textsize = (width, 0)
+	listsize = (width, int(math.ceil(itemheight*scale)*count))
+	if self["ErrorPixmap"].visible or self["QuestionPixmap"].visible or self["InfoPixmap"].visible:
+		self["list"].instance.move(ePoint(int(math.ceil(65*scale)), 0))
+		wsizex = textsize[0]+int(math.ceil(65*scale))
+	else:
+		self["list"].instance.move(ePoint(0, 0))
+		wsizex = textsize[0]
+	self["list"].instance.resize(eSize(*listsize))
+else:
+	textsize = self["text"].getSize()
+	if textsize[0] &lt; textsize[1]:
+		textsize = (textsize[1],textsize[0]+10)
+	if textsize[0] &gt; width:
+		textsize = (textsize[0], textsize[1]+int(math.ceil(itemheight*scale)))
+	else:
+		textsize = (width, textsize[1]+int(math.ceil(itemheight*scale)))
+	listsize = (textsize[0], int(math.ceil(itemheight*scale)*count))
+
+	self["text"].instance.resize(eSize(*textsize))
+	if self["ErrorPixmap"].visible or self["QuestionPixmap"].visible or self["InfoPixmap"].visible:
+		self["text"].instance.move(ePoint(int(math.ceil(65*scale)), 0))
+	else:
+		self["text"].instance.move(ePoint(10, 10))
+
+	if self["ErrorPixmap"].visible or self["QuestionPixmap"].visible or self["InfoPixmap"].visible:
+		self["list"].instance.move(ePoint(int(math.ceil(65*scale)), textsize[1]))
+		wsizex = textsize[0]+int(math.ceil(65*scale))
+	else:
+		self["list"].instance.move(ePoint(0, textsize[1]))
+		wsizex = textsize[0]
+	self["list"].instance.resize(eSize(*listsize))
+
+wsizey = textsize[1]+listsize[1]
+wsize = (wsizex, wsizey)
+self.instance.resize(eSize(*wsize))
+self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))
+                </applet>
+	</screen>
+</skin>

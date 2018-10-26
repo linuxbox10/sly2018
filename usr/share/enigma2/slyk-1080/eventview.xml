@@ -1,0 +1,120 @@
+
+<skin>
+        <!-- -->
+        <!-- movie player eventview -->
+	<screen name="EventViewSimple" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder" >
+		<ePixmap pixmap="2018-backgrounds/eventview.png" position="162,698" size="1596,278" alphatest="blend" zPosition="-1" />
+		<widget source="Title" render="Label" position="185,704" size="915,57" font="Bold;42" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="top" noWrap="1" transparent="1" zPosition="3" />
+		<!-- <widget name="datetime" position="1107,681" size="315,57" font="Regular;39" foregroundColor="skyblue" backgroundColor="skydarkblue" transparent="1" noWrap="1" valign="center" halign="right" />  -->
+		<!-- <widget name="duration" position="1422,704" size="179,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" noWrap="1" valign="center" halign="right" /> -->
+		<widget source="Event" render="Label" position="1157,704" size="108,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" halign="right" noWrap="1" transparent="1" zPosition="2">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H.%M</convert>
+		</widget>
+		<eLabel text="-" position="1275,704" size="23,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" halign="center"  noWrap="1" transparent="1" zPosition="2" />
+		<widget source="Event" render="Label" position="1298,704" size="108,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" halign="center" noWrap="1" transparent="1" zPosition="2">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="1422,704" size="179,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" halign="right"  noWrap="1" transparent="1" >
+			<convert type="EventTime">Duration</convert>
+			<convert type="Slyk18ClockToText">Slyk18AsLength</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1601,704" size="135,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" halign="right" noWrap="1" transparent="1" zPosition="1">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget name="FullDescription" position="215,776" size="1491,135" font="Regular;39" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" />
+		<ePixmap pixmap="myicons/up-down.png" position="200,933" size="54,30" backgroundColor="transparent" alphatest="blend" zPosition="4" />
+		<eLabel text="Scroll" position="261,918" size="171,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue" halign="left" valign="center" transparent="1" />
+	</screen>
+	
+	<!-- -->
+	<!-- Event View -->
+	<screen name="EventView1">
+		<ePixmap pixmap="2018-backgrounds/eventview.png" position="162,675" size="1596,336" alphatest="blend" zPosition="-1"  />
+		<widget source="Title" render="Label" position="185,681" size="915,57" font="Bold;42" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="top" noWrap="1" transparent="1" zPosition="3" />
+		<!-- <widget name="datetime" position="1107,681" size="315,57" font="Regular;39" foregroundColor="skyblue" backgroundColor="skydarkblue" transparent="1" noWrap="1" valign="center" halign="right" />  -->
+		<!-- <widget name="duration" position="1422,681" size="179,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" noWrap="1" valign="center" halign="right" /> -->
+		<widget source="Event" render="Label" position="1157,681" size="108,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" halign="right" noWrap="1" transparent="1" zPosition="2">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H.%M</convert>
+		</widget>
+		<eLabel text="-" position="1275,681" size="23,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" halign="center" noWrap="1" transparent="1" zPosition="2" />
+		<widget source="Event" render="Label" position="1298,681" size="108,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" halign="center" noWrap="1" transparent="1" zPosition="2">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="1422,681" size="179,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" halign="right" noWrap="1" transparent="1">
+			<convert type="EventTime">Duration</convert>
+			<convert type="Slyk18ClockToText">Slyk18AsLength</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1601,681" size="135,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" halign="right" noWrap="1" transparent="1" zPosition="1" >
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget name="FullDescription" position="215,753" size="1491,135" font="Regular;39" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" />
+		<ePixmap pixmap="myicons/up-down.png" position="200,911" size="54,30" backgroundColor="transparent" alphatest="blend" zPosition="4" />
+		<eLabel text="Scroll" position="261,896" size="150,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue"  valign="center" halign="left" transparent="1" />
+		<ePixmap pixmap="myicons/prev-next.png" position="441,911" size="60,30" backgroundColor="transparent" alphatest="blend"  zPosition="4" />
+		<eLabel text="Now/Next" position="509,896" size="300,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" halign="left" transparent="1" />
+		
+           	
+		 <panel position="200,960" size="0,48">
+	                <panel name="Red-New-Button" />
+                 </panel>
+	         <panel position="497,960" size="0,48">
+	           <panel name="Green-New-Button" />
+            	</panel>
+             	<panel position="794,960" size="0,48">
+	            <panel name="Yellow-New-Button" />
+             	</panel>
+              	<panel position="1091,960" size="0,48">
+               	       <panel name="Blue-New-Button" />
+                 </panel>
+
+                <ePixmap pixmap="mybuttons/key-epg.png" position="1556,965" size="75,36" alphatest="blend" zPosition="2" />
+		<ePixmap pixmap="mybuttons/key-menu.png" position="1646,965" size="75,36" alphatest="blend" zPosition="2" />
+	</screen>
+	
+	<!-- -->
+	<screen name="EventView2">
+		<ePixmap pixmap="2018-backgrounds/eventview.png" position="162,698" zPosition="-1" size="1596,278" alphatest="blend" />
+		<widget source="Title" render="Label" position="185,704" size="915,57" font="Bold;42" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="top" noWrap="1" transparent="1" zPosition="3" />
+		<!-- <widget name="datetime" position="1107,681" size="315,57" font="Regular;39" foregroundColor="skyblue" backgroundColor="skydarkblue" transparent="1" noWrap="1" valign="center" halign="right" />  -->
+		<!-- <widget name="duration" position="1422,704" size="179,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" noWrap="1" valign="center" halign="right" /> -->
+		<widget source="Event" render="Label" position="1157,704" size="108,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" halign="right" noWrap="1" transparent="1" zPosition="2">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H.%M</convert>
+		</widget>
+		<eLabel text="-" position="1275,704" size="23,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" noWrap="1" valign="center" halign="center" zPosition="2" />
+		<widget source="Event" render="Label" position="1298,704" size="108,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" halign="center" noWrap="1" transparent="1" zPosition="2">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="1422,704" size="179,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" halign="right" noWrap="1" transparent="1" >
+			<convert type="EventTime">Duration</convert>
+			<convert type="Slyk18ClockToText">Slyk18AsLength</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1601,704" size="135,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" halign="right"  noWrap="1" transparent="1" zPosition="1" >
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget name="FullDescription" position="215,776" size="1491,135" font="Regular;39" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" />
+		<ePixmap pixmap="myicons/up-down.png" position="200,933" size="54,30" backgroundColor="transparent"  alphatest="blend"  zPosition="4" />
+		<eLabel text="Scroll" position="261,918" size="150,57" font="Regular;39" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" halign="left" transparent="1" />
+		<ePixmap pixmap="myicons/prev-next.png" position="441,933" size="60,30" backgroundColor="transparent" alphatest="blend" zPosition="4" />
+		<eLabel text="Now/Next" position="509,918" size="300,57" font="Regular;39" valign="center" halign="left" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" />
+	</screen>
+	
+	<!-- EventView -->
+	<!-- /lib/python/Screens/EventView.py -->
+	<!-- eventview menu button -->
+	<screen name="EventViewContextMenu" position="0,0" size="1920,1080" backgroundColor="backgroundmid" flags="wfNoBorder" transparent="0" >
+	   <panel name="main-template" />
+		<panel name="v5-services" />
+		<panel name="t3-panel-bg" />
+		<panel name="panel-bars-left" />
+		<widget name="menu" textOffset="15,3" position="150,503" size="796,432" selectionPixmap="2018-selectbars/menu-bar-54.png" backgroundPixmap="2018-selectbars/blank.png" itemHeight="54" font="Regular;39" transparent="1" enableWrapAround="1" scrollbarMode="showNever" />
+
+
+	</screen>
+
+</skin>

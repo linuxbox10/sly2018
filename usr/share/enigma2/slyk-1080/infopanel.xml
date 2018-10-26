@@ -1,0 +1,272 @@
+
+<skin>
+        <!-- -->
+        <!-- Info Panel Menus -->
+	<screen name="Infopanel" position="0,0" size="1920,1080" title="Info Panel" flags="wfNoBorder" backgroundColor="backgroundmid">
+                <panel name="main-template" />
+		<panel name="v5-services" />
+		<panel name="t3-panel-bg" />
+		<panel name="panel-bars-left-75" />
+		<widget  name="Mlist" position="150,503" size="796,450" selectionPixmap="2018-selectbars/menu-bar-75.png" backgroundPixmap="2018-selectbars/blank.png" itemHeight="75" font="Regular;39" transparent="1" enableWrapAround="1" scrollbarMode="showNever" />
+                <eLabel text="Press SELECT" position="152,993" size="1350,48" font="Regular;39" foregroundColor="skyblue" backgroundColor="bgdarkblue" valign="top" halign="left" transparent="1"  />
+	
+        </screen>
+	
+	<!-- -->
+	<!-- ##MountManager## -->
+	<!-- /lib/python/Plugins/Extensions/Infopanel/MountManager.py -->
+	<!-- MountManager -->
+	<screen name="HddMount" position="0,0" size="1920,1080" title="Mount Manager" flags="wfNoBorder" backgroundColor="backgroundmid">
+	        <panel name="main-template-2" />
+		<panel name="v5-services" />
+		<widget source="Title" render="Label" position="90,123" size="1200,52" valign="center" halign="center" font="Regular;39" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
+		
+		
+		<widget source="list" render="Listbox" position="105,190" size="1170,750" scrollbarMode="showOnDemand" transparent="1" backgroundColor="skydarkblue" foregroundColor="white" backgroundColorSelected="skygold" foregroundColorSelected="skydarkblue" selectionPixmap="2018-selectbars/bar-108.png">
+			<convert type="TemplatedMultiContent">{"template": [
+				 MultiContentEntryText(pos = (90, 6), size = (1065, 45), font=0, text = 0),
+				 MultiContentEntryText(pos = (90, 45), size = (1065, 75), font=1, flags = RT_VALIGN_TOP, text = 1),
+				 MultiContentEntryPixmapAlphaBlend(pos = (15, 9), size = (60, 60), png = 2),
+				],
+				"fonts": [gFont("Regular",36),gFont("Regular",27)],
+				"itemHeight": 108
+				}</convert>
+		</widget>
+		<widget name="lab1" zPosition="2" position="105,190" size="1170,750" font="Regular;32" backgroundColor="bgdarkblue" foregroundColor="white" valign="center" halign="center" transparent="1" />
+	       <panel name="New-Buttons-T2" />
+	</screen>
+	
+	<!-- -->
+	<!-- hhdmounts - setup mounts -->
+	<screen name="DevicePanelConf" position="0,0" size="1920,1080" backgroundColor="backgroundmid" flags="wfNoBorder" zPosition="4" title="UserManager">
+		<panel name="Setup-Default" />
+		<widget name="Linconn" position="90,174" size="1200,176" font="Regular;39" foregroundColor="white" backgroundColor="skydarkblue" halign="left" valign="top" transparent="1" zPosition="4" />
+	
+        </screen>
+
+        <!-- -->
+      	<!-- CronManager (info panel ->  extensions -> cron manager, is different to timer menu -> cron timers) -->
+      	<!-- /lib/python/Plugins/Extensions/Infopanel/CronManager.py -->
+	<screen name="CronTimers" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="backgroundmid">
+	        <panel name="main-template" />
+		<panel name="v5-services" />
+		<panel name="t3-panel-bg" />
+		<panel name="setup-panel-bars-right" />
+                <eLabel position="156,506" size="288,426" backgroundColor="panelblue" zPosition="1"/>
+		<widget name="lab1" position="165,512" size="273,54" font="Regular;39" foregroundColor="white" backgroundColor="panelblue" valign="center" transparent="1" zPosition="2"/>
+		<widget name="labdisabled" position="165,566" size="273,54" font="Regular;39" foregroundColor="skyblue" backgroundColor="panelblue" valign="center" transparent="1" zPosition="2" />
+		<widget name="labactive" position="165,566" size="273,54" font="Regular;39" foregroundColor="skyblue" backgroundColor="panelblue" valign="center" transparent="1" zPosition="2" />
+                <widget name="lab2" position="165,674" size="273,54" font="Regular;39" foregroundColor="white" backgroundColor="panelblue" valign="center" transparent="1" zPosition="2"/>
+		<widget name="labstop" position="165,728" size="273,54" font="Regular;39" foregroundColor="skyblue" backgroundColor="panelblue" valign="center" transparent="1" zPosition="2"/>
+		<widget name="labrun" position="165,728" size="273,54" font="Regular;39" foregroundColor="skyblue" backgroundColor="panelblue" valign="center" transparent="1" zPosition="2"/>
+		<widget source="list" render="Listbox" position="518,503" size="1246,432" font="Regular;39" backgroundColor="skylightrow" selectionPixmap="2018-selectbars/menu-bar-54.png" backgroundPixmap="2018-selectbars/blank.png" itemHeight="54" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="1" >
+			<convert type="TemplatedMultiContent">{"template": [
+				 MultiContentEntryText(pos = (15, 6), size = (1206, 54), font=0, text = 0),
+				],
+				"fonts": [gFont("Regular",39)],
+				"itemHeight": 54
+				}</convert>
+		</widget>
+		<panel name="New-Buttons-T1" />
+	</screen>
+	
+	<!-- -->
+	<screen name="SetupCronConf" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="backgroundmid">
+		<panel name="Setup-Default" />
+		<panel name="t1-TextButton" />
+	</screen>
+	
+	<!-- -->
+	<!-- ##ScriptRunner## / JobManager -->
+	<!-- /lib/python/Plugins/Extensions/Infopanel/ScriptRunner.py -->
+        <screen name="ScriptRunner" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="backgroundmid">
+	      <panel name="main-template" />
+		<panel name="v5-services" />
+		<panel name="t3-panel-bg" />
+		<panel name="panel-bars-left" />
+		
+ 	        <widget name="lab1" position="152,993" size="1350,48" font="Regular;39" foregroundColor="skyblue" backgroundColor="bgdarkblue" valign="top" halign="left" transparent="1"  />
+                <widget name="list" textOffset="15,3" position="150,503" size="796,432" selectionPixmap="2018-selectbars/menu-bar-54.png" backgroundPixmap="2018-selectbars/blank.png" itemHeight="54" font="Regular;39" transparent="1" enableWrapAround="1" scrollbarMode="showNever" />
+		<panel name="New-Buttons-T1" />
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(54)</applet>
+	</screen>
+	
+	<!-- -->
+	<!-- ##SwapManager## -->
+	<!-- /lib/python/Plugins/Extensions/Infopanel/SwapManager.py -->
+	<screen name="Swap" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="backgroundmid">
+	       	<panel name="main-template" />
+		<panel name="v5-services" />
+		<panel name="t3-panel-bg" />
+		
+		<eLabel position="280,506" size="1360,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="280,560" size="1360,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="280,614" size="1360,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="280,668" size="1360,48" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="954,506" size="12,216" backgroundColor="bgdarkblue" zPosition="-1"/>
+
+		<widget name="autostart_off" position="1279,506" size="48,48" zPosition="1" pixmap="icons/lock_off.png" alphatest="blend" transparent="1" />
+		<widget name="autostart_on" position="1279,506" size="48,48" zPosition="2" pixmap="icons/lock_on.png" alphatest="blend" transparent="1" />
+		
+                <widget name="lab1" position="295,506" size="644,48" font="Regular;39" valign="center" transparent="1" backgroundColor="skylightrow" />
+		<widget name="lab2" position="295,560" size="644,48" font="Regular;39" valign="center" transparent="1" backgroundColor="skydarkrow" />
+		<widget name="lab3" position="295,614" size="644,48" font="Regular;39" valign="center" transparent="1" backgroundColor="skylightrow" />
+		<widget name="lab4" position="295,668" size="644,48" font="Regular;39" valign="center" transparent="1" backgroundColor="skydarkrow" />
+		
+                <widget name="labplace" position="966,560" size="644,48" font="Regular;39" valign="center" halign="center" backgroundColor="skylightrow" transparent="1"/>
+		<widget name="labsize" position="966,614" size="644,48" font="Regular;39" valign="center" halign="center" backgroundColor="skydarkrow" transparent="1"/>
+		<widget name="inactive" position="966,668" size="644,48" font="Regular;39" valign="center" halign="center" backgroundColor="skylightrow" transparent="1"/>
+		<widget name="active" position="966,668" size="644,48" font="Regular;39" valign="center" halign="center" backgroundColor="skydarkrow" transparent="1"/>
+		
+		<panel name="New-Buttons-T1" />
+	</screen>
+	
+	<!-- -->
+	<!-- ##QuickMenu ## -->
+	<!-- /lib/python/Plugins/Extensions/Infopanel/QuickMenu.py -->
+        <screen name="QuickMenu" position="0,0" size="1920,1080" backgroundColor="backgroundmid" flags="wfNoBorder">
+             <panel name="main-template-2" />
+		<panel name="v5-services" />
+		<widget source="Title" render="Label" position="90,123" size="1200,52" valign="center" halign="center" font="Regular;39" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
+		<widget name="list" position="150,228" size="510,675"  backgroundColor="bgdarkblue" foregroundColor="white" backgroundColorSelected="skygold" foregroundColorSelected="skydarkblue" selectionPixmap="2018-selectbars/bar-75.png" itemHeight="75" scrollbarMode="showNever" transparent="1" />
+                <widget name="sublist" position="720,228" size="510,675" backgroundColor="bgdarkblue" foregroundColor="white" backgroundColorSelected="skygold" foregroundColorSelected="skydarkblue" selectionPixmap="2018-selectbars/bar-75.png" itemHeight="75" scrollbarMode="showNever" transparent="1" />
+                <widget name="description"  position="1372,459" size="443,186" font="Regular;27" foregroundColor="white" backgroundColor="skydarkblue" valign="top" transparent="1" zPosition="4" />
+               <panel name="New-Buttons-T2" />
+ 	</screen>
+
+         <!-- -->
+	<screen name="QuickMenuDevices" position="0,0" size="1920,1080" title="Mount Manager" flags="wfNoBorder" backgroundColor="backgroundmid">
+	        <panel name="main-template-2" />
+		<panel name="v5-services" />
+		<widget source="Title" render="Label" position="90,123" size="1200,52" valign="center" halign="center" font="Regular;39" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
+		
+		
+		<widget source="devicelist" render="Listbox" position="105,190" size="1170,750" scrollbarMode="showOnDemand" transparent="1" backgroundColor="skydarkblue" foregroundColor="white" backgroundColorSelected="skygold" foregroundColorSelected="skydarkblue" selectionPixmap="2018-selectbars/bar-108.png">
+			<convert type="TemplatedMultiContent">{"template": [
+				 MultiContentEntryText(pos = (90, 6), size = (1065, 45), font=0, text = 0),
+				 MultiContentEntryText(pos = (90, 45), size = (1065, 75), font=1, flags = RT_VALIGN_TOP, text = 1),
+				 MultiContentEntryPixmapAlphaBlend(pos = (15, 9), size = (60, 60), png = 2),
+				],
+				"fonts": [gFont("Regular",36),gFont("Regular",27)],
+				"itemHeight": 108
+				}</convert>
+		</widget>
+		<widget name="lab1" zPosition="2" position="105,190" size="1170,750" font="Regular;32" backgroundColor="bgdarkblue" foregroundColor="white" valign="center" halign="center" transparent="1" />
+	</screen>
+	
+	<!-- -->
+	<!-- ##RestartNetwork## -->
+	<!--/lib/python/Plugins/Extensions/Infopanel/RestartNetwork.py -->
+	<screen name="RestartNetwork" position="center,center" size="900,150" title="Restart Network Adapter">
+		<widget name="label" position="center,45" size="900,75" halign="center" font="Regular;39" transparent="1" foregroundColor="white" />
+	</screen>
+	
+
+	<!-- -->
+	<!-- ##SoftcamPanel## -->
+	<!-- /lib/python/Plugins/Extensions/Infopanel/SoftcamPanel.py -->
+	<screen name="SoftcamPanel" position="0,0" size="1920,1080" title="Softcam Panel" flags="wfNoBorder" backgroundColor="backgroundmid">
+	        <panel name="main-template" />
+		<panel name="v5-services" />
+		<panel name="t3-panel-bg" />
+		
+		<eLabel position="849,506" size="915,48" backgroundColor="skylightrow" zPosition="-1"/>                                         -
+		<eLabel position="849,560" size="915,48" backgroundColor="skydarkrow" zPosition="-1"/>
+	
+		<eLabel position="849,722" size="915,48" backgroundColor="skylightrow" zPosition="-1"/>
+		<eLabel position="849,776" size="915,48" backgroundColor="skydarkrow" zPosition="-1"/>
+	
+		
+		<eLabel position="156,506" size="645,426" backgroundColor="panelblue" zPosition="1"/>
+		<widget name="config" textOffset="15,0" position="849,503" size="915,108" font="Regular;39" secondfont="Regular;39" backgroundColor="skylightrow" selectionPixmap="2018-selectbars/menu-bar-54.png" backgroundPixmap="2018-selectbars/blank.png" itemHeight="54" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="1" />
+		<widget name="actifcam" position="864,722" size="885,48" font="Regular;39" foregroundColor="white" valign="center" backgroundColor="skylightrow" transparent="1" />
+		<widget name="actifcam2" position="864,776" size="885,48" font="Regular;39" foregroundColor="white" valign="center" backgroundColor="skydarkrow" transparent="1" />
+		<widget name="ecminfo" position="165,515" size="627,408" font="Regular;27" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" zPosition="2" />
+		
+		<eLabel text="Use" position="152,993" size="75,48" font="Regular;39" foregroundColor="skyblue" backgroundColor="bgdarkblue" valign="top" halign="left" transparent="1" zPosition="1" />
+		<ePixmap pixmap="myicons/prev-next.png" position="227,1004" size="60,30" alphatest="blend" transparent="1" />
+		<eLabel text="to change settings and press GREEN to restart cam" position="296,993" size="900,48" font="Regular;39" foregroundColor="skyblue" backgroundColor="bgdarkblue" valign="center" halign="left" transparent="1" zPosition="1" />
+
+
+		<panel name="New-Buttons-T1" />
+	</screen>
+	
+	<!-- -->
+	<!-- info panel SoftcamPanel Install-->
+	<screen name="ShowSoftcamPackages" position="0,0" size="1920,1080" title="Install Softcams" flags="wfNoBorder" backgroundColor="backgroundmid">
+                <panel name="main-template-2" />
+		<panel name="v5-services" />
+		<widget source="Title" render="Label" position="90,123" size="1200,52" valign="center" halign="center" font="Regular;39" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
+
+		<widget source="list" render="Listbox" position="150,228" size="1080,675"  backgroundColor="bgdarkblue" foregroundColor="white" backgroundColorSelected="skygold" foregroundColorSelected="skydarkblue" selectionPixmap="2018-selectbars/bar-75.png" itemHeight="75" scrollbarMode="showNever" transparent="1" >
+			<convert type="TemplatedMultiContent">{"template": [
+						MultiContentEntryPixmapAlphaBlend(pos = (15, 9), size = (72, 72), png = 4), # index 4 is the status pixmap
+						MultiContentEntryText(pos = (90, 6), size = (975, 45), font=0, flags = RT_HALIGN_LEFT, text = 0,  color = 0x00ffffff, color_sel = 0x00133171), # index 0 is the name
+						MultiContentEntryText(pos = (90, 39), size = (975, 30), font=1, flags = RT_HALIGN_LEFT, text = 2, color = 0x00ffffff, color_sel = 0x00133171), # index 2 is the description
+						MultiContentEntryPixmapAlphaBlend(pos = (0, 73), size = (1080, 2), png = 5), # index 5 is the div pixmap
+					],
+				"fonts": [gFont("Regular",30),gFont("Regular",24)],
+				"itemHeight": 75,
+				"scrollbarMode": "showNever"
+				}</convert>
+		</widget>
+		<panel name="New-Buttons-T2" />
+
+	</screen>
+	
+	<!-- -->
+	<!-- ##SoftwarePanel## -->
+	<!-- /lib/python/Plugins/Extensions/Infopanel/SoftwarePanel.py -->
+	<!-- software update -->
+	<screen name="SoftwarePanel" position="0,0" size="1920,1080" backgroundColor="backgroundmid" flags="wfNoBorder" title="Software Panel">
+               <panel name="main-template-2" />
+		<panel name="v5-services" />
+		<widget source="Title" render="Label" position="90,123" size="1200,52" valign="center" halign="center" font="Regular;39" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
+
+		
+		<widget name="packagetext" position="150,175" size="345,53" font="Regular;33" foregroundColor="white" backgroundColor="skydarkblue" valign="center" halign="left" transparent="1" zPosition="2" />
+		<widget name="packagenr" position="495,175" size="75,53" font="Regular;33" foregroundColor="white" backgroundColor="skydarkblue"  valign="center" halign="right" transparent="1" zPosition="2" />
+		
+                <widget source="list" render="Listbox" position="150,228" size="1080,675"  backgroundColor="bgdarkblue" foregroundColor="white" backgroundColorSelected="skygold" foregroundColorSelected="skydarkblue" selectionPixmap="2018-selectbars/bar-75.png" itemHeight="75" scrollbarMode="showOnDemand" transparent="1" >
+				<convert type="TemplatedMultiContent">{"template": [
+                                		MultiContentEntryText(pos = (15, 6), size = (975, 45), font=0, flags = RT_HALIGN_LEFT, text = 0, color = 0x00ffffff, color_sel = 0x00133171), # index 0 is the name
+						MultiContentEntryText(pos = (15, 39), size = (975, 30), font=1, flags = RT_HALIGN_LEFT, text = 2, color = 0x00ffffff, color_sel = 0x00133171), # index 2 is the description
+						MultiContentEntryPixmapAlphaBlend(pos = (993, 2), size = (72, 72), png = 4), # index 4 is the status pixmap
+
+					],
+				"fonts": [gFont("Regular",30),gFont("Regular",24)],
+				"itemHeight": 75
+			
+				}</convert>
+		</widget>
+		<widget name="a_off"       position="1161,189" size="69,24" pixmap="icons/aoff2.png"       alphatest="blend"  zPosition="1"/>
+		<widget name="a_red"       position="1161,189" size="69,24" pixmap="icons/ared2.png"       alphatest="blend"  zPosition="1" />
+		<widget name="a_yellow"    position="1161,189" size="69,24" pixmap="icons/ayellow2.png"    alphatest="blend"  zPosition="1" />
+		<widget name="a_green"     position="1161,189" size="69,24" pixmap="icons/agreen2.png"     alphatest="blend" transparent="1" zPosition="1"/>
+			
+	
+                <ePixmap pixmap="buttons/key_red.png"                       position="153,1001" size="36,36" alphatest="blend"  zPosition="2" />
+		<widget name="key_red"                                      position="201,996" size="315,47" font="Regular;39" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="skyblue" backgroundColor="backgroundbot" zPosition="2" />
+		<widget name="key_green_pic" pixmap="buttons/key_green.png" position="528,1001" size="36,36" alphatest="blend"  zPosition="2" />
+		<widget name="key_green"                                   position="576,996" size="315,47" font="Regular;39" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="skyblue" backgroundColor="backgroundbot" zPosition="2" />
+
+
+
+        </screen>
+
+        <!-- -->
+	<!-- Info Panel Infos -->
+	<screen name="Info" position="0,0" size="1920,1080" title="Info" flags="wfNoBorder" backgroundColor="backgroundmid">	
+        <panel name="main-bg" />
+        <panel name="my-logo" />
+        <panel name="t1-time" />
+        <panel name="v5-services" />
+        <panel name="t3-panel-top-bg" />
+        <widget name="label2" render="Label" position="135,186" size="750,53" font="Bold;38" foregroundColor="white" backgroundColor="bgdarkblue" valign="center" noWrap="1" transparent="1" zPosition="1" />
+       	<widget name="label1"  position="160,291" size="1600,699" font="Console;27" zPosition="3" transparent="1" backgroundColor="bgdarkblue" foregroundColor="white" />
+    </screen>
+
+
+</skin>
+
+

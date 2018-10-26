@@ -1,0 +1,190 @@
+
+<skin>
+	<screen name="searchbox">
+		<ePixmap pixmap="toppicks/searchbox2.png" position="90,48" size="359,63" zPosition="2" />	
+	</screen>
+	
+	<screen name="searchboxlabel">
+	        <eLabel text="Search" position="178,53" size="261,54"  font="Regular;33" foregroundColor="#0080b3f8" backgroundColor="#001a3d83" transparent="1" valign="center" halign="left"  zPosition="3" />
+        </screen>
+	
+	<screen name="tile1bg">
+		<eLabel position="83,146" size="290,188" backgroundColor="#00e6c224" transparent="0" zPosition="2" />
+	</screen>
+	
+	<screen name="tile1">
+		<ePixmap pixmap="toppicks/toptiles/tile1.png" position="90,153" size="275,122" zPosition="2" />
+		<eLabel text="TV Guide" position="90,275" size="275,51" font="Regular;33" foregroundColor="white" backgroundColor="skylightrow" transparent="0" valign="center" halign="center" zPosition="2" />
+	</screen>
+	
+	<screen name="tile1-roi">
+		<ePixmap pixmap="toppicks/toptiles/tile1-roi.png" position="90,153" size="275,122" zPosition="2" />
+		<eLabel text="TV Guide" position="90,275" size="275,51" font="Regular;33" foregroundColor="white" backgroundColor="skylightrow" transparent="0" valign="center" halign="center" zPosition="2" />
+	</screen>
+	
+	<screen name="tile2">
+		<ePixmap pixmap="toppicks/toptiles/tile2.png" position="383,153" size="275,122" zPosition="2" />
+		<eLabel text="Sky Box Sets" position="383,275" size="275,51" font="Regular;33" foregroundColor="white" backgroundColor="skylightrow" transparent="0" valign="center" halign="center" zPosition="2" />
+	</screen>
+	
+	<screen name="tile3">
+		<ePixmap pixmap="toppicks/toptiles/tile3.png" position="675,153" size="275,122" zPosition="2" />
+		<eLabel text="Sky Cinema" position="675,275" size="275,51" font="Regular;33" foregroundColor="white" backgroundColor="skylightrow" transparent="0" valign="center" halign="center" zPosition="2" />
+	</screen>
+	
+	<screen name="tile4">
+		<ePixmap pixmap="toppicks/toptiles/tile4.png" position="968,153" size="275,122" zPosition="2" />
+		<eLabel text="Kids" position="968,275" size="275,51" font="Regular;33" foregroundColor="white" backgroundColor="skylightrow" transparent="0" valign="center" halign="center" zPosition="2" />
+	</screen>
+	
+	<screen name="tile5">
+		<ePixmap pixmap="toppicks/toptiles/tile5.png" position="90,344" size="275,122" zPosition="2" />
+		<eLabel text="Planner" position="90,465" size="275,51" font="Regular;33" foregroundColor="white" backgroundColor="skylightrow" transparent="0" valign="center" halign="center" zPosition="2" />
+	</screen>
+	
+	<screen name="tile6">
+		<ePixmap pixmap="toppicks/toptiles/tile6.png" position="383,344" size="275,122" zPosition="2" />
+		<eLabel text="Catch Up TV" position="383,465" size="275,51" font="Regular;33" foregroundColor="white" backgroundColor="skylightrow" transparent="0" valign="center" halign="center" zPosition="2" />
+	</screen>
+	
+	<screen name="tile6-roi">
+		<ePixmap pixmap="toppicks/toptiles/tile6-roi.png" position="383,344" size="275,122" zPosition="2" />
+		<eLabel text="Catch Up TV" position="383,465" size="275,51" font="Regular;33" foregroundColor="white" backgroundColor="skylightrow" transparent="0" valign="center" halign="center" zPosition="2" />
+	</screen>
+	
+	<screen name="tile7">
+		<ePixmap pixmap="toppicks/toptiles/tile7.png" position="675,344" size="275,122" zPosition="2" />
+		<eLabel text="Sports" position="675,465" size="275,51" font="Regular;33" foregroundColor="white" backgroundColor="skylightrow" transparent="0" valign="center" halign="center" zPosition="2" />
+	</screen>
+	
+	<screen name="tile8">
+		<ePixmap pixmap="toppicks/toptiles/tile8.png" position="968,344" size="275,122" zPosition="2" />
+		<eLabel text="Sky Store" position="968,465" size="275,51" font="Regular;33" foregroundColor="white" backgroundColor="skylightrow" transparent="0" valign="center" halign="center" zPosition="2" />
+	</screen>
+	
+	<screen name="toppicks-tv">
+		<widget source="session.VideoPicture" render="Pig" position="1253,146" size="582,327" backgroundColor="transparent" transparent="1" />
+	        <eLabel  position="1260,153" size="567,312" backgroundColor="transparent" zPosition="4"/>
+		<eLabel  position="1260,465" size="567,51" backgroundColor="skylightrow" transparent="0"  zPosition="2" />
+		
+
+                <widget source="session.CurrentService" render="Label" position="1260,465" size="567,51" font="Regular;33" foregroundColor="white" backgroundColor="skylightrow" transparent="1" valign="center" halign="center" noWrap="1" zPosition="3">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+	</screen>
+	
+	<!-- divider line -->
+	<screen name="tp-divider">
+	        <eLabel  position="90,570" size="1745,2" backgroundColor="skylightrow" transparent="0"  zPosition="2" />
+	</screen>
+	
+	<screen name="tp-title-col1">
+	        <eLabel text="Today's Top Picks" position="90,572" size="567,60" font="Regular;33" foregroundColor="white" backgroundColor="backgroundmid" transparent="1" valign="center" halign="left" zPosition="2" />
+        </screen>
+        
+       	<screen name="tp-title-col2">
+	       <eLabel text="Today's Top Picks" position="675,572" size="567,60" font="Regular;33" foregroundColor="white" backgroundColor="backgroundmid" transparent="1" valign="center" halign="left" zPosition="2" />
+        </screen>
+        
+	<screen name="tp-bouquet-list">
+	        <widget name="menu" position="center,503" size="1350,432" textOffset="15,6" foregroundColor="white" backgroundColor="skydarkblue" backgroundColorSelected="skygold"
+                foregroundColorSelected="skydarkblue" zPosition="4" transparent="1" scrollbarMode="showOnDemand" selectionPixmap="2018-selectbars/menu-bar-54.png"  backgroundPixmap="2018-selectbars/blank.png"
+                 enableWrapAround="1" itemHeight="54" font="Regular;36" />
+
+        </screen>
+        
+        <screen name="toppicks1">
+      		<ePixmap pixmap="toppicks/screens/toppicks1.png" position="90,632" size="567,366" zPosition="2" />
+       	
+        </screen>
+
+        <screen name="toppicks2">
+      		<ePixmap pixmap="toppicks/screens/toppicks2.png" position="675,632" size="275,366" zPosition="2" />
+       	
+        </screen>
+
+        <screen name="toppicks3">
+      		<ePixmap pixmap="toppicks/screens/toppicks3.png" position="968,632" size="275,366" zPosition="2" />
+       	
+        </screen>
+        
+
+        <screen name="toppicks4">
+      		<ePixmap pixmap="toppicks/screens/toppicks4.png" position="1260,632" size="275,366" zPosition="2" />
+       	
+        </screen>
+        
+        <screen name="toppicks5">
+      		<ePixmap pixmap="toppicks/screens/toppicks5.png" position="1553,632" size="275,174" zPosition="2" />
+       	
+        </screen>
+        
+         <screen name="toppicks6">
+      		<ePixmap pixmap="toppicks/screens/toppicks6.png" position="1553,824" size="275,174" zPosition="2" />
+
+        </screen>
+        
+        	
+	<screen name="searchboxlabel2">
+	        <eLabel text="Choose Bouquet" position="178,53" size="261,54"  font="Regular;33" foregroundColor="#0080b3f8" backgroundColor="#001d3c7f" transparent="1" valign="center" halign="left"  zPosition="3" />
+        </screen>
+        
+	<screen name="BouquetSelector" position="0,0" size="1920,1080" backgroundColor="backgroundmid" transparent="0" flags="wfNoBorder" title="Select a bouquet">
+		<panel name="main-bg" />
+		<panel name="searchbox" />
+		<panel name="searchboxlabel2" />
+		<panel name="my-logo" />
+		<panel name="t1-time" />
+		<panel name="tile3" />
+		<panel name="tile4" />
+		<panel name="tile7" />
+		<panel name="tile8" />
+		<panel name="toppicks-tv" />
+		<ePixmap pixmap="2018-backgrounds/mask.png" position="0,0" size="1920,1080"  alphatest="blend" zPosition="3" />
+		<panel name="tp-divider" />
+                <panel name="tp-title-col1" />
+		<panel name="toppicks1" />
+		<panel name="toppicks2" />
+	        <panel name="toppicks3" />
+		<panel name="toppicks4" />
+		<panel name="toppicks5" />
+		<panel name="toppicks6" />
+	        <ePixmap pixmap="2018-backgrounds/menu-bars-364.png" position="90,153" size="567,572"  zPosition="3" />	
+                <widget name="menu" position="90,153" size="567,572" textOffset="15,3" font="Regular;39" itemHeight="52" foregroundColor="white" backgroundColor="skylightrow" backgroundColorSelected="" foregroundColorSelected="skylightrow"
+                selectionPixmap="2018-selectbars/bar-52.png"
+                zPosition="4" transparent="1" scrollbarMode="showNever" enableWrapAround="1" />
+	</screen>
+	
+	<screen name="Menu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="backgroundmid" title="Main Menu">
+		<panel name="main-bg" />
+		<panel name="searchbox" />
+		<panel name="searchboxlabel" />
+		<panel name="my-logo" />
+		<panel name="t1-time" />
+		<panel name="tile1bg" />
+		<panel name="tile1" />
+		<panel name="tile2" />
+		<panel name="tile3" />
+		<panel name="tile4" />
+		<panel name="tile5" />
+		<panel name="tile6" />
+		<panel name="tile7" />
+		<panel name="tile8" />
+		<panel name="toppicks-tv" />
+		<panel name="tp-divider" />
+		<panel name="tp-title-col2" />
+		<panel name="toppicks2" />
+	        <panel name="toppicks3" />
+		<panel name="toppicks4" />
+		<panel name="toppicks5" />
+		<panel name="toppicks6" />
+	        <ePixmap pixmap="2018-backgrounds/menu-bars-52.png" position="90,632" size="567,366"  zPosition="3" />		
+		<widget source="menu" render="Listbox" position="90,633" size="567,364" selectionPixmap="2018-selectbars/bar-52.png" backgroundPixmap="2018-selectbars/blank.png" itemHeight="52" font="Regular;36" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="4">
+			<convert type="TemplatedMultiContent">{"template": [	
+                                MultiContentEntryText(pos = (30,0), size = (1290,53), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0	) ],
+				"fonts": [gFont("Regular",38)],
+				"itemHeight": 52
+				}</convert>
+		</widget>
+	</screen>
+</skin>
